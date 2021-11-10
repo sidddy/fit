@@ -4745,6 +4745,7 @@ type WeightScaleMsg struct {
 	MetabolicAge      uint8
 	VisceralFatRating uint8
 	UserProfileIndex  MessageIndex // Associates this weight scale message to a user.  This corresponds to the index of the user profile message in the weight scale file.
+	BodyMassIndex     uint16
 }
 
 // NewWeightScaleMsg returns a weight_scale FIT message
@@ -4764,6 +4765,7 @@ func NewWeightScaleMsg() *WeightScaleMsg {
 		MetabolicAge:      0xFF,
 		VisceralFatRating: 0xFF,
 		UserProfileIndex:  0xFFFF,
+		BodyMassIndex:     0xFFFF,
 	}
 }
 
