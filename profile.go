@@ -637,7 +637,7 @@ var _fields = [...][256]*field{
 		0:   {1, 0, types.Fit(0), 1},
 		1:   {2, 1, types.Fit(0), 1},
 		2:   {3, 2, types.Fit(4), 1},
-		3:   {4, 3, types.Fit(6), 1},
+		3:   {4, 3, types.Fit(15), 1},
 		4:   {5, 4, types.Fit(2), 1},
 		7:   {6, 7, types.Fit(4), 1},
 		8:   {7, 8, types.Fit(4), 1},
