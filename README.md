@@ -17,29 +17,23 @@ The two latest versions of Go is supported. The core decoding package has no
 external dependencies. The latest release of Go and a few external dependencies
 are required for running the full test suite and benchmarks.
 
-**Latest release:** 0.12.0
+**Latest release:** 0.13.0
 
-_Note:_ 0.6.0 contains a breaking change, see #46.
+### Version Support
 
-### FIT SDK Version Support
+The current supported FIT SDK version is **21.84**.
 
-**Current supported FIT SDK version:** 21.67
+Developer data fields are currently only _partially_ supported.
+At the moment the decoder parses Developer Data Field Descriptions, Developer Data ID Messages and Field Description Messages.
+The decoder currently discards developer data fields found in records. 
 
-**Warning:** Data Developers Fields are not yet supported (#21).
+The encoder will currently (silently) ignore anything related to Developer data fields,
+This also means that encoding will not fail if protocol version 2 is specified for a file header.
 
-Older supported profile versions:
-
-* 21.60
-* 21.40
-* 21.38
-* 21.32
-* 20.90
-* 20.43
-* 20.27
-* 20.14
-* 16.20
-
-Other profile versions may work, but have not been tested.
+Developer data fields support is tracked by
+[#21](https://github.com/tormoder/fit/issues/21)
+and
+[#64](https://github.com/tormoder/fit/issues/64).
 
 ### Features
 
@@ -54,7 +48,7 @@ Other profile versions may work, but have not been tested.
 Using Go modules:
 
 ```
-$ go get github.com/tormoder/fit@v0.12.0
+$ go get github.com/tormoder/fit@v0.13.0
 ```
 
 Using `$GOPATH`:
@@ -79,3 +73,4 @@ $ go get github.com/tormoder/fit
 - [colinrgodsey](https://github.com/colinrgodsey)
 - [bpg](https://github.com/bpg)
 - [pieterclaerhout](https://github.com/pieterclaerhout)
+- [beyoung](https://github.com/beyoung)
